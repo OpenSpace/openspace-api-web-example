@@ -1,0 +1,33 @@
+{
+  "name": "openspace-api-js-example",
+  "version": "1.0.0",
+  "description": "Minimal web application using the OpenSpace WebSocket API",
+  "scripts": {
+    "build": "rimraf dist && webpack --mode production --config webpack.config.js && cp app/index.html dist/index.html",
+    "start": "webpack-dev-server --content-base app"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "openspace-api-js": "^0.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "file-loader": "^3.0.1",
+    "rimraf": "^2.6.3",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "entry"
+        }
+      ]
+    ]
+  }
+}
