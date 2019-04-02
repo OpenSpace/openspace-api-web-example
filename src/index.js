@@ -55,6 +55,9 @@ async function getTime() {
 function createScaleSlider() {
   const element = document.createElement('input');
   element.type = 'range';
+  element.min = 0.1;
+  element.max = 2;
+  element.step = 0.1;
   document.body.append(element);
   element.oninput = function (event) {
     api.setProperty('Scene.Earth.Scale.Scale', parseFloat(event.target.value));
